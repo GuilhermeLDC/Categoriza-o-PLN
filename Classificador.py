@@ -56,11 +56,9 @@ class Classificador_smartphone:
         
 
         file_positivos_norm = self.normalizar(file_positivos)
-        self.sxxx = file_positivos_norm
         random.shuffle(file_positivos_norm)
         
         file_negativos_norm = self.normalizar(file_negativos)
-        self.syyy = file_negativos_norm
         random.shuffle(file_negativos_norm)
 
         
@@ -77,7 +75,6 @@ class Classificador_smartphone:
         q_teste_pos = len(file_positivos_norm) - q_treino_pos
 
         q_treino_neg = int(0.85*len(file_negativos_norm))
-        print(q_treino_neg)
         q_teste_neg = len(file_negativos_norm) - q_treino_neg
 
         #Formato adequado ao classificador:
